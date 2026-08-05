@@ -1,6 +1,14 @@
+import { useReveal } from "../hooks/useReveal";
+
 export default function About() {
+  const [ref, visible] = useReveal();
+
   return (
-    <section id="about" className="section">
+    <section
+      id="about"
+      ref={ref}
+      className={`section reveal ${visible ? "is-visible" : ""}`}
+    >
       <h2 className="section__title">01. About</h2>
       <p>
         I&apos;m a Computer Science student with a growing focus on

@@ -1,12 +1,18 @@
+import { useTypewriter } from "../hooks/useReveal";
+
 export default function Hero() {
+  const typed = useTypewriter("CS Student & Aspiring Cybersecurity Specialist", 30);
+
   return (
     <section id="top" className="hero">
+      <div className="hero__glow" aria-hidden="true" />
       <p className="hero__eyebrow">// whoami</p>
       <h1>
-        Marco Akl<span className="accent">_</span>
+        Marco Akl<span className="accent blink">_</span>
       </h1>
       <p className="hero__subtitle">
-        CS Student &amp; Aspiring Cybersecurity Specialist
+        {typed}
+        <span className="blink">|</span>
       </p>
       <p className="hero__desc">
         I build software and pick it apart again — learning how systems
