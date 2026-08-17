@@ -6,9 +6,12 @@
   --text-dim: #8ea0b3;
   --accent: #39ff88;
   --accent-dim: #1f8f52;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas,
+    "Liberation Mono", Menlo, monospace;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
   --max-width: 880px;
+  --prose-width: 65ch;
 }
 
 * {
@@ -17,10 +20,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -114,7 +119,21 @@ h3 {
 
 .nav__links {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .nav__inner {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+
+  .nav__links {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+  }
 }
 
 .nav__links a {
@@ -153,7 +172,6 @@ h3 {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 6rem 1.5rem 4rem;
-  overflow: hidden;
 }
 
 .hero__glow {
@@ -183,6 +201,25 @@ h3 {
   }
 }
 
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal {
+    margin-top: 2.5rem;
+  }
+}
+
 .hero__eyebrow {
   font-family: var(--font-mono);
   color: var(--accent);
@@ -204,7 +241,7 @@ h3 {
 }
 
 .hero__desc {
-  max-width: 55ch;
+  max-width: var(--prose-width);
   color: var(--text-dim);
   margin: 1.25rem 0 0;
   animation: fade-up 0.6s ease 0.3s both;
@@ -226,6 +263,64 @@ h3 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Terminal */
+
+.terminal {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  animation: fade-up 0.6s ease 0.2s both;
+}
+
+.terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.terminal__dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.terminal__title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-left: 0.4rem;
+}
+
+.terminal__body {
+  padding: 1.1rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  /* Reserves the session's fully-typed height up front so the card
+     never grows/shifts while the terminal types. */
+  min-height: 15.5rem;
+}
+
+.terminal__line--command {
+  color: var(--text);
+  margin-top: 0.9rem;
+}
+
+.terminal__body > .terminal__line--command:first-child {
+  margin-top: 0;
+}
+
+.terminal__prompt {
+  color: var(--accent);
 }
 
 .btn {
@@ -297,7 +392,7 @@ h3 {
 
 .section p {
   color: var(--text-dim);
-  max-width: 65ch;
+  max-width: var(--prose-width);
 }
 
 .section p + p {
@@ -414,7 +509,8 @@ h3 {
 
 .contact__links a {
   display: flex;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
   font-family: var(--font-mono);
   color: var(--text);
   border: 1px solid var(--border);
@@ -422,6 +518,11 @@ h3 {
   padding: 0.9rem 1.2rem;
   opacity: 0;
   transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.contact__links a > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .contact__links a.is-visible {
