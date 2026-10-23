@@ -1,26 +1,25 @@
 const links = [
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-  { href: "#note", label: "Leave a Note" },
+  { href: "#work", label: "Work" },
+  { href: "#toolkit", label: "Toolkit" },
 ];
 
 export default function Nav() {
   return (
     <header className="nav">
-      <div className="nav__inner">
-        <a href="#top" className="nav__brand">
-          Marco<span className="accent">.</span>Akl
+      <a href="#top" className="nav__brand" aria-label="Marco Akl, back to top">
+        MA
+      </a>
+      <nav className="nav__links" aria-label="Sections">
+        {links.map((link) => (
+          <a key={link.href} href={link.href} className="link nav__wide">
+            {link.label}
+          </a>
+        ))}
+        <a href="#contact" className="link nav__action">
+          Contact
         </a>
-        <nav className="nav__links">
-          {links.map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      </div>
+      </nav>
     </header>
   );
 }

@@ -1,33 +1,29 @@
-import Terminal from "./Terminal";
+import Nav from "./Nav";
 
 export default function Hero() {
   return (
     <section id="top" className="hero">
-      <div className="hero__glow" aria-hidden="true" />
-      <div className="hero__inner">
-        <div className="hero__content">
-          <p className="hero__eyebrow">// whoami</p>
-          <h1>
-            Marco Akl<span className="accent blink">_</span>
-          </h1>
-          <p className="hero__subtitle">
-            CS Student &amp; Aspiring Cybersecurity Specialist
-            <span className="blink">|</span>
-          </p>
-          <p className="hero__desc">
-            I build software and pick it apart again — learning how systems
-            break so I can help build the ones that don&apos;t.
-          </p>
-          <div className="hero__actions">
-            <a className="btn btn--primary" href="#projects">
-              View Projects
-            </a>
-            <a className="btn btn--ghost" href="#contact">
-              Get In Touch
-            </a>
-          </div>
-        </div>
-        <Terminal />
+      <Nav />
+      <h1 className="hero__name lines">
+        <span className="line">
+          <span data-line style={{ "--i": 0 }}>
+            Marco
+          </span>
+        </span>
+        <span className="line">
+          <span data-line style={{ "--i": 1 }} className="hero__name-second">
+            Akl
+          </span>
+        </span>
+      </h1>
+      <div className="hero__intro">
+        <p>
+          Computer science student becoming a cybersecurity specialist. I
+          build software, then take it apart to learn how it breaks.
+        </p>
+        <a className="button button--light" href="#work">
+          See my work
+        </a>
       </div>
     </section>
   );

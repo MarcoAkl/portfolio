@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useReveal } from "../hooks/useReveal";
 
 function encode(data) {
   return Object.keys(data)
@@ -8,7 +7,6 @@ function encode(data) {
 }
 
 export default function Note() {
-  const [ref, visible] = useReveal();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("idle");
 
@@ -33,20 +31,18 @@ export default function Note() {
   };
 
   return (
-    <section
-      id="note"
-      ref={ref}
-      className={`section reveal ${visible ? "is-visible" : ""}`}
-    >
-      <h2 className="section__title">05. Leave a Note</h2>
-      <p>
-        Got feedback, a question, or just want to say hi? Drop a note below —
-        it lands straight in my inbox.
-      </p>
+    <div id="note" className="note">
+      <div className="note__intro" data-reveal>
+        <h3>Leave a note</h3>
+        <p>
+          Feedback, a question, or just saying hi. It lands straight in my
+          inbox.
+        </p>
+      </div>
 
       {status === "sent" ? (
-        <p className="note__success">
-          Message sent — thanks for reaching out. I&apos;ll get back to you
+        <p className="note__success" role="status">
+          Message sent. Thanks for reaching out, I&apos;ll get back to you
           soon.
         </p>
       ) : (
@@ -57,6 +53,8 @@ export default function Note() {
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
           className="note-form"
+          data-reveal
+          style={{ "--i": 1 }}
         >
           <input type="hidden" name="form-name" value="leave-a-note" />
           <p className="note-form__honeypot">
@@ -65,46 +63,50 @@ export default function Note() {
               <input name="bot-field" onChange={handleChange} />
             </label>
           </p>
-          <div className="note-form__row">
+          <label>
+            <span>Name</span>
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              autoComplete="name"
               value={form.name}
               onChange={handleChange}
               required
             />
+          </label>
+          <label>
+            <span>Email</span>
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              autoComplete="email"
               value={form.email}
               onChange={handleChange}
               required
             />
+          </label>
+          <label className="note-form__wide">
+            <span>Your note</span>
+            <textarea
+              name="message"
+              rows={5}
+              value={form.message}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <div className="note-form__wide note-form__actions">
+            <button type="submit" className="button" disabled={status === "sending"}>
+              {status === "sending" ? "Sending…" : "Send note"}
+            </button>
+            {status === "error" && (
+              <p className="note__error" role="alert">
+                Something went wrong. Try again, or email me directly.
+              </p>
+            )}
           </div>
-          <textarea
-            name="message"
-            placeholder="Your note..."
-            rows={5}
-            value={form.message}
-            onChange={handleChange}
-            required
-          />
-          <button
-            type="submit"
-            className="btn btn--primary"
-            disabled={status === "sending"}
-          >
-            {status === "sending" ? "Sending..." : "Send Note"}
-          </button>
-          {status === "error" && (
-            <p className="note__error">
-              Something went wrong — try again, or email me directly.
-            </p>
-          )}
         </form>
       )}
-    </section>
+    </div>
   );
 }

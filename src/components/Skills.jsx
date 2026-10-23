@@ -1,34 +1,33 @@
 import { skillGroups } from "../data/skills";
-import { useReveal } from "../hooks/useReveal";
 
 export default function Skills() {
-  const [ref, visible] = useReveal();
-
   return (
-    <section
-      id="skills"
-      ref={ref}
-      className={`section reveal ${visible ? "is-visible" : ""}`}
-    >
-      <h2 className="section__title">02. Skills</h2>
-      <div className="skills">
-        {skillGroups.map((group, groupIndex) => (
-          <div className="skills__group" key={group.label}>
-            <h3>{group.label}</h3>
-            <ul>
-              {group.items.map((item, itemIndex) => (
-                <li
-                  key={item}
-                  style={{
-                    "--delay": `${groupIndex * 100 + itemIndex * 40}ms`,
-                  }}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <section id="toolkit" className="section toolkit">
+      <h2 className="section__title toolkit__title" data-reveal>
+        The tools I reach for
+      </h2>
+      <div className="toolkit__body">
+        <figure className="toolkit__picture" data-reveal>
+          <img
+            src="/images/enigma.jpg"
+            alt="Keyboard and lampboard of a four-rotor Enigma machine"
+            loading="lazy"
+            width="1200"
+            height="1500"
+          />
+        </figure>
+        <div className="toolkit__table">
+          {skillGroups.map((group, groupIndex) => (
+            <div className="toolkit__group" key={group.label} data-reveal style={{ "--i": groupIndex }}>
+              <h3>{group.label}</h3>
+              <ul>
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
