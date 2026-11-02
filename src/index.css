@@ -525,8 +525,15 @@ a.contact__value {
   text-decoration-thickness: 0.04em;
 }
 
-.contact__hello {
+.contact__hello,
+.contact__cv {
   align-items: center !important;
+}
+
+.contact__cv {
+  justify-content: space-between;
+  row-gap: 16px;
+  padding-top: 24px !important;
 }
 
 .contact__go {

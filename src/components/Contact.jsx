@@ -1,6 +1,7 @@
 import Note from "./Note";
 
 const EMAIL = "marco.akl.2006.ta@gmail.com";
+const CV_URL = "/Marco-Akl-CV.pdf";
 
 const rows = [
   { value: EMAIL, href: `mailto:${EMAIL}` },
@@ -35,7 +36,13 @@ export default function Contact() {
             )}
           </li>
         ))}
-        <li className="contact__hello" data-reveal style={{ "--i": rows.length }}>
+        <li id="cv" className="contact__cv" data-reveal style={{ "--i": rows.length }}>
+          <span className="contact__value">Here&apos;s my curriculum vitae</span>
+          <a className="button" href={CV_URL} download="Marco-Akl-CV.pdf">
+            Download CV (PDF)
+          </a>
+        </li>
+        <li className="contact__hello" data-reveal style={{ "--i": rows.length + 1 }}>
           <span className="contact__value">Say hello</span>
           <a
             className="contact__go"

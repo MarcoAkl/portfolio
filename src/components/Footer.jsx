@@ -17,6 +17,7 @@ export default function Footer() {
           <ul>
             <li><a className="link" href="https://github.com/MarcoAkl" target="_blank" rel="noreferrer">GitHub</a></li>
             <li><a className="link" href="mailto:marco.akl.2006.ta@gmail.com">Email</a></li>
+            <li><a className="link" href="/Marco-Akl-CV.pdf" download="Marco-Akl-CV.pdf">CV (PDF)</a></li>
           </ul>
         </div>
         <div>
