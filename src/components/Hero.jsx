@@ -18,8 +18,8 @@ export default function Hero() {
       </h1>
       <div className="hero__intro">
         <p>
-          Computer science student becoming a cybersecurity specialist. I
-          build software, then take it apart to learn how it breaks.
+          Computer science student building web apps and back-end services,
+          working toward a career in cybersecurity.
         </p>
         <a className="button button--light" href="#work">
           See my work

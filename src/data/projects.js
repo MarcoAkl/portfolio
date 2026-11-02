@@ -1,55 +1,50 @@
-// Edit this list to swap in your real projects as you build them.
-// Each picture is a piece of computing or cryptography history, not a
-// screenshot of the project; `caption` says what it actually shows.
+// Every project here is a real repository. `link` is the code (null for
+// private repositories, which recruiters cannot open); `live` is the
+// deployed site, if there is one. `caption` says what each picture shows:
+// a screenshot of the project, or a piece of computing history where no
+// screenshot is available yet.
 export const projects = [
   {
-    title: "Network Vulnerability Scanner",
+    title: "Order & Inventory",
     description:
-      "A Python CLI tool that sweeps a local network, fingerprints open ports/services with an Nmap wrapper, and flags hosts running known-vulnerable versions.",
-    tags: ["Python", "Nmap", "Networking"],
-    link: "https://github.com/MarcoAkl",
+      "Two Spring Boot microservices, each with its own PostgreSQL database, that place orders and reserve stock over HTTP. The order id doubles as the reservation id, so a retry after a timeout or crash can never reserve stock twice. Tested with JUnit 5, Testcontainers and WireMock, with CI on GitHub Actions. Built as a take-home assignment.",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+    link: null,
     image: "/images/arpanet-map-1977.png",
     caption: "ARPANET logical map, March 1977",
     position: "50% 40%",
   },
   {
-    title: "Encrypted Password Vault",
+    title: "PersonCardNav",
     description:
-      "A local-first password manager with AES-256 encryption at rest, a master-password key derivation flow, and a simple CLI for storing and retrieving credentials.",
-    tags: ["Python", "Cryptography", "Security"],
-    link: "https://github.com/MarcoAkl",
-    image: "/images/enigma.jpg",
-    caption: "Four-rotor Enigma machine in its wooden case",
-    position: "45% 50%",
+      "A people directory on the public DummyJSON API, built for a front-end brief: search, filter, sort and pagination, favourites, a detail page per person, light and dark themes, and unit tests with Vitest.",
+    tags: ["React", "TypeScript", "React Query", "Vitest"],
+    link: "https://github.com/MarcoAkl/PersonCardNav",
+    live: "https://personcardnav.netlify.app",
+    image: "/images/personcardnav.png",
+    caption: "PersonCardNav, the live directory page",
+    position: "50% 0%",
   },
   {
-    title: "Phishing URL Detector",
+    title: "QA Test Case Writer",
     description:
-      "A browser extension that heuristically scores links on a page for phishing risk (lookalike domains, redirect chains, suspicious TLDs) and warns before you click.",
-    tags: ["JavaScript", "Browser Extension", "Security"],
-    link: "https://github.com/MarcoAkl",
-    image: "/images/switchboard-1907.jpg",
-    caption: "Telephone switchboard operators, Salt Lake City, 1907",
-    position: "75% 50%",
-  },
-  {
-    title: "CTF Write-ups",
-    description:
-      "A growing collection of solved challenges from picoCTF and HackTheBox, documenting the vulnerability, exploit path, and lessons learned for each.",
-    tags: ["CTF", "Exploitation", "Documentation"],
-    link: "https://github.com/MarcoAkl",
-    image: "/images/colossus.jpg",
-    caption: "The rebuilt Colossus codebreaking computer, Bletchley Park",
-    position: "70% 50%",
+      "A browser tool for writing QA test cases, with required proof for each one, that exports the finished report as a Word or PDF file. It runs as a static page on Netlify, with an optional Flask version.",
+    tags: ["JavaScript", "Python", "Flask"],
+    link: null,
+    live: "https://qa-test-case-writer.netlify.app",
+    image: "/images/qa-test-case-writer.png",
+    caption: "QA Test Case Writer, the live report builder",
+    position: "50% 0%",
   },
   {
     title: "This Portfolio",
     description:
-      "A fast, dependency-light React site built to showcase projects and coursework, deployed on Netlify straight from GitHub.",
+      "This site: React and Vite, deployed on Netlify from GitHub, including the phishing-link checker further down the page.",
     tags: ["React", "Vite", "Netlify"],
     link: "https://github.com/MarcoAkl/portfolio",
-    image: "/images/punch-card.jpg",
-    caption: "An 80-column punched card",
-    position: "50% 50%",
+    live: "https://thewhotomyi.netlify.app",
+    image: "/images/enigma.jpg",
+    caption: "Four-rotor Enigma machine in its wooden case",
+    position: "45% 50%",
   },
 ];

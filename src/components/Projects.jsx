@@ -4,6 +4,7 @@ import { projects } from "../data/projects";
 // An index of project names. Pointing at or tabbing to a name makes it the
 // active one; the sticky frame on the right shows its picture and details.
 // On touch screens every row carries its own picture and description.
+// Private repositories get a focusable row instead of a dead link.
 export default function Projects() {
   const [active, setActive] = useState(0);
   const current = projects[active];
@@ -15,13 +16,17 @@ export default function Projects() {
       </h2>
       <div className="work__grid">
         <ul className="work__list">
-          {projects.map((project, index) => (
+          {projects.map((project, index) => {
+            const href = project.live ?? project.link;
+            const Row = href ? "a" : "div";
+            const rowProps = href
+              ? { href, target: "_blank", rel: "noreferrer" }
+              : { tabIndex: 0 };
+            return (
             <li key={project.title} data-reveal style={{ "--i": index }}>
-              <a
+              <Row
+                {...rowProps}
                 className={`work__row ${index === active ? "is-active" : ""}`}
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
                 onPointerEnter={() => setActive(index)}
                 onFocus={() => setActive(index)}
               >
@@ -38,9 +43,13 @@ export default function Projects() {
                 <span className="work__name">{project.title}</span>
                 <span className="work__tags">{project.tags.join(", ")}</span>
                 <span className="work__desc">{project.description}</span>
-              </a>
+                {!project.link && (
+                  <span className="work__private">Private repository, code available on request</span>
+                )}
+              </Row>
             </li>
-          ))}
+            );
+          })}
         </ul>
         <aside className="work__preview" aria-live="polite" data-reveal>
           <div className="work__frame">
@@ -59,9 +68,20 @@ export default function Projects() {
           </div>
           <p className="work__caption">{current.caption}</p>
           <p className="work__about">{current.description}</p>
-          <a className="link work__open" href={current.link} target="_blank" rel="noreferrer">
-            View {current.title} on GitHub
-          </a>
+          <div className="work__links">
+            {current.live && (
+              <a className="link work__open" href={current.live} target="_blank" rel="noreferrer">
+                Open the live site
+              </a>
+            )}
+            {current.link ? (
+              <a className="link work__open" href={current.link} target="_blank" rel="noreferrer">
+                View the code on GitHub
+              </a>
+            ) : (
+              <p className="work__open">Private repository, code available on request</p>
+            )}
+          </div>
         </aside>
       </div>
     </section>

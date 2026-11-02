@@ -4,13 +4,13 @@ export default function Skills() {
   return (
     <section id="toolkit" className="section toolkit">
       <h2 className="section__title toolkit__title" data-reveal>
-        The tools I reach for
+        What my projects use
       </h2>
       <div className="toolkit__body">
         <figure className="toolkit__picture" data-reveal>
           <img
-            src="/images/enigma.jpg"
-            alt="Keyboard and lampboard of a four-rotor Enigma machine"
+            src="/images/colossus.jpg"
+            alt="The rebuilt Colossus codebreaking computer at Bletchley Park"
             loading="lazy"
             width="1200"
             height="1500"

@@ -45,8 +45,8 @@ function findBrandTrick(labels, host, path) {
   return null;
 }
 
-// A quick heuristic score, in the spirit of the Phishing URL Detector
-// project. It reads the address only; nothing is fetched or sent anywhere.
+// A quick heuristic phishing score. It reads the address only; nothing is
+// fetched or sent anywhere.
 function analyse(raw) {
   const input = raw.trim();
   if (!input) return null;
@@ -121,9 +121,9 @@ export default function LinkCheck() {
           Would you click this link?
         </h2>
         <p data-reveal style={{ "--i": 1 }}>
-          Paste any web address. This runs a small version of the checks
-          behind my phishing detector: lookalike spellings, risky endings and
-          hidden redirects. It only reads the text; nothing is visited or
+          Paste any web address. This small checker, built into this site,
+          looks for common phishing signs: lookalike spellings, risky endings
+          and hidden redirects. It only reads the text; nothing is visited or
           sent anywhere.
         </p>
         <label className="check__field" data-reveal style={{ "--i": 2 }}>

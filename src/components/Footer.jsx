@@ -14,25 +14,11 @@ const credits = [
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
   },
   {
-    title: "Telephone switchboard 6 Oct 1907 Salt Lake City",
-    page: "https://commons.wikimedia.org/wiki/File:Telephone_switchboard_6_Oct_1907_Salt_Lake_City.jpg",
-    by: "The Salt Lake Herald",
-    license: "public domain",
-    licenseUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
-  },
-  {
     title: "Colossus Computer, Bletchley Park",
     page: "https://commons.wikimedia.org/wiki/File:Colossus_Computer_-_Bletchley_Park_-_geograph.org.uk_-_3419224.jpg",
     by: "Paul Gillett",
     license: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
-  },
-  {
-    title: "Punch card 2",
-    page: "https://commons.wikimedia.org/wiki/File:Punch_card_2.jpg",
-    by: "Maksym Kozlenko",
-    license: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
   },
 ];
 

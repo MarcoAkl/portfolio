@@ -1,21 +1,19 @@
+// Only tools used in the projects on this site.
 export const skillGroups = [
   {
     label: "Languages",
-    items: ["Python", "JavaScript / TypeScript", "C", "Java", "Bash"],
+    items: ["Java", "TypeScript", "JavaScript", "Python"],
   },
   {
-    label: "Security",
-    items: [
-      "Network Security Fundamentals",
-      "Linux / Kali",
-      "Wireshark",
-      "Nmap",
-      "Burp Suite",
-      "OWASP Top 10",
-    ],
+    label: "Back end",
+    items: ["Spring Boot", "PostgreSQL", "Liquibase", "Flask"],
   },
   {
-    label: "Web & Tools",
-    items: ["React", "Node.js", "Git", "Docker", "REST APIs"],
+    label: "Front end",
+    items: ["React", "Vite", "React Query"],
+  },
+  {
+    label: "Testing and delivery",
+    items: ["JUnit 5", "Testcontainers", "Vitest", "Playwright", "Docker Compose", "GitHub Actions"],
   },
 ];

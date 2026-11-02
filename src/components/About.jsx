@@ -1,7 +1,7 @@
 const facts = [
-  { label: "Studying", value: "Computer Science" },
-  { label: "Focus", value: "Cybersecurity" },
-  { label: "Practising on", value: "picoCTF, Hack The Box" },
+  { label: "Studying", value: "Computer Science, degree in progress" },
+  { label: "Builds with", value: "Java, React, Python" },
+  { label: "Working toward", value: "Cybersecurity" },
   { label: "Open to", value: "Internships" },
 ];
 
@@ -21,15 +21,19 @@ export default function About() {
       </dl>
       <div className="about__text" data-reveal style={{ "--i": 1 }}>
         <p className="about__lead">
-          I&apos;m a computer science student focused on security: network
-          defence and secure coding on one side, penetration testing and CTF
-          challenges on the other. I like knowing how a protocol is supposed
-          to behave, and finding out what happens when it doesn&apos;t.
+          I&apos;m a computer science student who builds web apps and back-end
+          services: a pair of Spring Boot microservices, a React and
+          TypeScript directory app, and a small QA reporting tool.
         </p>
         <p>
-          Right now I&apos;m sharpening that through coursework, personal
-          projects and hands-on practice with Wireshark, Nmap and Burp Suite,
-          with the goal of working as a cybersecurity specialist.
+          I build with AI coding assistants such as Claude, and I treat each
+          project as a way to learn how the pieces fit together, from the
+          database to the tests.
+        </p>
+        <p>
+          Security is where I want to end up. My next step is networking
+          fundamentals and hands-on practice, and I&apos;ll add that work here
+          as I do it.
         </p>
       </div>
     </section>

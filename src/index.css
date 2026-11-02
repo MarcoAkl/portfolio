@@ -297,7 +297,7 @@ ul {
   flex-wrap: wrap;
   align-items: baseline;
   column-gap: 1.25rem;
-  padding: 10px 0;
+  padding: 14px 0;
   color: var(--muted);
   text-decoration: none;
   transition: color var(--t-hover) ease;
@@ -319,7 +319,8 @@ ul {
 }
 
 .work__thumb,
-.work__desc {
+.work__desc,
+.work__private {
   display: none;
 }
 
@@ -359,6 +360,12 @@ ul {
 
 .work__about {
   font-size: var(--step-body);
+}
+
+.work__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
 }
 
 .work__open {
@@ -470,7 +477,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 30% 60%;
+  object-position: 70% 50%;
 }
 
 .toolkit__table {
@@ -885,6 +892,12 @@ a.contact__value {
   .work__desc {
     display: block;
     font-size: var(--step-body);
+  }
+
+  .work__private {
+    display: block;
+    font-size: var(--step-small);
+    font-weight: 500;
   }
 
   .work__preview {

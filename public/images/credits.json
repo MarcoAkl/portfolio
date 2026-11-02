@@ -68,51 +68,5 @@
    "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
   ],
   "saved": "2026-10-23T09:23:20.532Z"
- },
- {
-  "file": "public/images/punch-card.jpg",
-  "media": "image",
-  "ref": "commons:98511515",
-  "title": "Punch card 2",
-  "creator": "Maksym Kozlenko",
-  "creatorUrl": null,
-  "date": "2019-08-04",
-  "license": "CC BY-SA 4.0",
-  "licenseCode": "by-sa",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "creditRequired": true,
-  "page": "https://commons.wikimedia.org/wiki/File:Punch_card_2.jpg",
-  "via": "Wikimedia Commons",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Punch_card_2.jpg/1920px-Punch_card_2.jpg",
-  "width": 1920,
-  "height": 960,
-  "bytes": 636251,
-  "credit": "\"Punch card 2\" by Maksym Kozlenko, CC BY-SA 4.0, via Wikimedia Commons",
-  "notes": [
-   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
-  ],
-  "saved": "2026-10-23T09:23:21.638Z"
- },
- {
-  "file": "public/images/switchboard-1907.jpg",
-  "media": "image",
-  "ref": "commons:15135457",
-  "title": "Telephone switchboard 6 Oct 1907 Salt Lake City",
-  "creator": "The Salt Lake Herald",
-  "creatorUrl": null,
-  "date": "1907-10-06",
-  "license": "public domain",
-  "licenseCode": "pd",
-  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-  "creditRequired": false,
-  "page": "https://commons.wikimedia.org/wiki/File:Telephone_switchboard_6_Oct_1907_Salt_Lake_City.jpg",
-  "via": "Wikimedia Commons",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Telephone_switchboard_6_Oct_1907_Salt_Lake_City.jpg",
-  "width": 1024,
-  "height": 798,
-  "bytes": 402172,
-  "credit": "\"Telephone switchboard 6 Oct 1907 Salt Lake City\" by The Salt Lake Herald, public domain, via Wikimedia Commons",
-  "notes": [],
-  "saved": "2026-10-23T09:23:34.839Z"
  }
 ]

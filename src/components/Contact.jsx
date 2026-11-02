@@ -5,7 +5,7 @@ const EMAIL = "marco.akl.2006.ta@gmail.com";
 const rows = [
   { value: EMAIL, href: `mailto:${EMAIL}` },
   { value: "github.com/MarcoAkl", href: "https://github.com/MarcoAkl" },
-  { value: "Open to security internships" },
+  { value: "Open to internships" },
 ];
 
 export default function Contact() {
