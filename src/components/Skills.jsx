@@ -7,15 +7,6 @@ export default function Skills() {
         What my projects use
       </h2>
       <div className="toolkit__body">
-        <figure className="toolkit__picture" data-reveal>
-          <img
-            src="/images/colossus.jpg"
-            alt="The rebuilt Colossus codebreaking computer at Bletchley Park"
-            loading="lazy"
-            width="1200"
-            height="1500"
-          />
-        </figure>
         <div className="toolkit__table">
           {skillGroups.map((group, groupIndex) => (
             <div className="toolkit__group" key={group.label} data-reveal style={{ "--i": groupIndex }}>

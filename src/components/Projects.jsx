@@ -35,8 +35,8 @@ export default function Projects() {
                     src={project.image}
                     alt={project.caption}
                     loading="lazy"
-                    width="1600"
-                    height="1000"
+                    width="1440"
+                    height="1080"
                     style={{ objectPosition: project.position }}
                   />
                 </figure>
@@ -60,8 +60,8 @@ export default function Projects() {
                 alt={index === active ? project.caption : ""}
                 className={index === active ? "is-active" : ""}
                 loading="lazy"
-                width="1200"
-                height="1500"
+                width="1440"
+                height="1080"
                 style={{ objectPosition: project.position }}
               />
             ))}

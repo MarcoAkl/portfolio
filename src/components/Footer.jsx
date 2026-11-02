@@ -1,27 +1,3 @@
-const credits = [
-  {
-    title: "Arpanet logical map, march 1977",
-    page: "https://commons.wikimedia.org/wiki/File:Arpanet_logical_map,_march_1977.png",
-    by: "ARPANET",
-    license: "public domain",
-    licenseUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
-  },
-  {
-    title: "Enigma-IMG 0487-black",
-    page: "https://commons.wikimedia.org/wiki/File:Enigma-IMG_0487-black.jpg",
-    by: "Rama",
-    license: "CC BY-SA 2.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
-  },
-  {
-    title: "Colossus Computer, Bletchley Park",
-    page: "https://commons.wikimedia.org/wiki/File:Colossus_Computer_-_Bletchley_Park_-_geograph.org.uk_-_3419224.jpg",
-    by: "Paul Gillett",
-    license: "CC BY-SA 2.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
-  },
-];
-
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -49,18 +25,6 @@ export default function Footer() {
             <li>React and Vite</li>
             <li>Deployed on Netlify</li>
           </ul>
-        </div>
-        <div className="footer__credits">
-          <p className="footer__head">Pictures</p>
-          <p>
-            {credits.map((c, i) => (
-              <span key={c.page}>
-                <a className="link" href={c.page} target="_blank" rel="noreferrer">“{c.title}”</a> by {c.by},{" "}
-                <a className="link" href={c.licenseUrl} target="_blank" rel="noreferrer">{c.license}</a>
-                {i < credits.length - 1 ? "; " : ", via Wikimedia Commons."}
-              </span>
-            ))}
-          </p>
         </div>
       </div>
       <div className="footer__mark">

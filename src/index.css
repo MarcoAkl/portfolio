@@ -287,7 +287,7 @@ ul {
 
 .work__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: var(--gutter);
   margin-top: 48px;
 }
@@ -334,7 +334,7 @@ ul {
 
 .work__frame {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--surface);
 }
@@ -460,30 +460,13 @@ ul {
 }
 
 .toolkit__body {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--gutter);
   margin-top: 96px;
 }
 
-.toolkit__picture {
-  grid-column: 1 / span 4;
-  align-self: end;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-}
-
-.toolkit__picture img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 70% 50%;
-}
-
 .toolkit__table {
-  grid-column: 7 / -1;
   display: grid;
-  gap: 44px;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px var(--gutter);
 }
 
 .toolkit__group {
@@ -501,6 +484,7 @@ ul {
 
 .toolkit__group ul {
   display: grid;
+  align-content: start;
   gap: 14px;
 }
 
@@ -677,11 +661,6 @@ a.contact__value {
   grid-column: span 2;
 }
 
-.footer__columns > .footer__credits {
-  grid-column: 8 / -1;
-  color: var(--field-soft);
-}
-
 .footer__columns ul {
   display: grid;
   gap: 6px;
@@ -690,10 +669,6 @@ a.contact__value {
 
 .footer__head {
   margin-bottom: 6px;
-  color: var(--field-ink);
-}
-
-.footer__credits a {
   color: var(--field-ink);
 }
 
@@ -806,20 +781,8 @@ a.contact__value {
     grid-template-columns: 1fr;
   }
 
-  .toolkit__picture {
-    grid-column: 1 / span 5;
-  }
-
-  .toolkit__table {
-    grid-column: 6 / -1;
-  }
-
   .footer__columns > div {
     grid-column: span 4;
-  }
-
-  .footer__columns > .footer__credits {
-    grid-column: 1 / -1;
   }
 }
 
@@ -874,7 +837,7 @@ a.contact__value {
   .work__thumb {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     margin-bottom: 8px;
   }
@@ -909,19 +872,12 @@ a.contact__value {
   }
 
   .toolkit__body {
-    grid-template-columns: 1fr;
     margin-top: 48px;
   }
 
   .toolkit__table {
-    grid-column: 1;
-  }
-
-  .toolkit__picture {
-    grid-column: 1;
-    order: 2;
-    width: 60%;
-    justify-self: end;
+    grid-template-columns: 1fr;
+    gap: 44px;
   }
 
   .toolkit__group {
@@ -964,12 +920,7 @@ a.contact__value {
     grid-template-columns: 1fr 1fr;
   }
 
-  .footer__columns > div,
-  .footer__columns > .footer__credits {
+  .footer__columns > div {
     grid-column: auto;
-  }
-
-  .footer__columns > .footer__credits {
-    grid-column: 1 / -1;
   }
 }
