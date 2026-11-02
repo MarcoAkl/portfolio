@@ -1,5 +1,6 @@
 const facts = [
-  { label: "Studying", value: "Computer Science, degree in progress" },
+  { label: "Studying", value: "BS Computer Science, expected 2028" },
+  { label: "Currently", value: "Support Agent at Hamster POS" },
   { label: "Builds with", value: "Java, React, Python" },
   { label: "Working toward", value: "Cybersecurity" },
   { label: "Open to", value: "Internships" },

@@ -7,6 +7,7 @@ export default function Footer() {
           <p className="footer__head">On this page</p>
           <ul>
             <li><a className="link" href="#about">About</a></li>
+            <li><a className="link" href="#experience">Experience</a></li>
             <li><a className="link" href="#work">Work</a></li>
             <li><a className="link" href="#toolkit">Toolkit</a></li>
             <li><a className="link" href="#contact">Contact</a></li>

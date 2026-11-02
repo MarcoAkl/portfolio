@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import LinkCheck from "./components/LinkCheck";
 import Skills from "./components/Skills";
@@ -36,6 +37,7 @@ function App() {
       <main className="page">
         <Hero />
         <About />
+        <Experience />
         <Projects />
         <LinkCheck />
         <Skills />

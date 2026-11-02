@@ -283,6 +283,56 @@ ul {
   line-height: 1.35;
 }
 
+/* ---------- experience ---------- */
+
+.experience__list {
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 48px;
+}
+
+.experience__item {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 2.6fr;
+  gap: var(--gutter);
+  align-items: baseline;
+}
+
+.experience__dates {
+  font-size: var(--step-small);
+  color: var(--muted);
+}
+
+.experience__who h3 {
+  font-size: var(--step-lead);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.experience__who p {
+  color: var(--muted);
+}
+
+.experience__points {
+  display: grid;
+  gap: 10px;
+  padding-left: 1.1em;
+  list-style: disc;
+  max-width: 62ch;
+}
+
+.experience__subhead {
+  margin-top: 96px;
+  font-size: var(--step-lead);
+  font-weight: 700;
+}
+
+.experience__subhead + .experience__list {
+  margin-top: 32px;
+}
+
 /* ---------- work ---------- */
 
 .work__grid {
@@ -824,6 +874,15 @@ a.contact__value {
   .about__facts {
     order: 2;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .experience__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .experience__points {
+    margin-top: 8px;
   }
 
   .work__grid {
